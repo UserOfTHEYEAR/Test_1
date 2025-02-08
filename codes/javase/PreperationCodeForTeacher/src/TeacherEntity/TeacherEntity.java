@@ -2,7 +2,7 @@ package TeacherEntity;
 
 import java.util.Objects;
 
-public class Teacher_Entity {
+public class TeacherEntity {
 
 		private int Id;
 		private String name;
@@ -12,12 +12,18 @@ public class Teacher_Entity {
 		private String username;
 		private String password;
 		
-		public Teacher_Entity(int id, String name, String surname, String phone, String address, String username,
-				String password) {
-			super();
-
 		
-}
+
+		public TeacherEntity(int id, String name, String surname, String phone, String address, String username,
+				String password) {
+			Id = id;
+			this.name = name;
+			this.surname = surname;
+			this.phone = phone;
+			this.address = address;
+			this.username = username;
+			this.password = password;
+		}
 
 		@Override
 		public int hashCode() {
@@ -32,7 +38,7 @@ public class Teacher_Entity {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			Teacher_Entity other = (Teacher_Entity) obj;
+			TeacherEntity other = (TeacherEntity) obj;
 			return Id == other.Id && Objects.equals(address, other.address) && Objects.equals(name, other.name)
 					&& Objects.equals(password, other.password) && Objects.equals(phone, other.phone)
 					&& Objects.equals(surname, other.surname) && Objects.equals(username, other.username);
@@ -99,3 +105,4 @@ public class Teacher_Entity {
 		public void setPassword(String password) {
 			this.password = password;
 		}
+}
