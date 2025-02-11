@@ -14,7 +14,7 @@ public class TeacherRepositry {
 				+ teacher.getAddress() + ",'" + teacher.getUsername() + ",'" + teacher.getPassword() + "')";
 
 		try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:teacher_project", "root", "0703");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306//teacher_project?useSSL=false", "root", "0703");
 
 			Statement st = conn.createStatement();
 			
