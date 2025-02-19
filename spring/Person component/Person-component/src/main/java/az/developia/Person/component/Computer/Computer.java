@@ -1,5 +1,7 @@
 package az.developia.Person.component.Computer;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component(value = "myComp1")
@@ -9,6 +11,8 @@ import org.springframework.stereotype.Component;
 	private String Brand;
 	private Integer Price;
 	private String color;
+	@Autowired
+	@Qualifier(value="ComputerRam")
 
 	public Computer() {
 	this.id=1;
@@ -48,4 +52,10 @@ import org.springframework.stereotype.Component;
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+	@Override
+	public String toString() {
+		return "Computer [id=" + id + ", Brand=" + Brand + ", Price=" + Price + ", color=" + color + "]";
 	}
+	}
+
