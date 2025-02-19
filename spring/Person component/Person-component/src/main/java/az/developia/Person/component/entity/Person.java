@@ -2,6 +2,8 @@ package az.developia.Person.component.entity;
 
 import java.util.Objects;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,8 +14,11 @@ public class Person {
 		private String name;
 		private Integer Age;
 		private Integer sallery;
+		@Autowired
+		@Qualifier(value="myComp1")
 		
-		public Book() {
+		
+		public Person() {
 			this.id=1;
 			this.name="Jake";
 		    this.Age=42;

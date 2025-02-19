@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import az.developia.Person.PersonComponent.entity.Person;
+import az.developia.Person.component.entity.Person;
+
+
 
 
 @SpringBootApplication
@@ -22,3 +24,4 @@ public class PersonComponentApplication {
 	}
 
 }
+	}
