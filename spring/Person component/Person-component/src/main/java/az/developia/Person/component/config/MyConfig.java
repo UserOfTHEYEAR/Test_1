@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+import az.developia.Person.component.Computer.Computer;
 import az.developia.Person.component.entity.Person;
 
 @Configuration
@@ -14,7 +15,7 @@ public class MyConfig {
 	P.setId(1);
 	P.setAge(45);
 	P.setName("Bob");
-	P.setSallery("Bayramov");
+	P.setSallery(2000);
 	return P;
 
 	}
@@ -24,6 +25,6 @@ public class MyConfig {
 	public Computer myComp2() {
 	Computer c=new Computer();
 	c.setId(1);
-	c.setModel("g65");
+	c.setBrand("g65");
 	return c;
-}
+}}

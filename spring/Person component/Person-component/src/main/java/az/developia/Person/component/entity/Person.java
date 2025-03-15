@@ -14,8 +14,9 @@ public class Person {
 		private String name;
 		private Integer Age;
 		private Integer sallery;
-		@Autowired
-		@Qualifier(value="myComp1")
+		
+		//@Autowired
+		//@Qualifier(value="myComp1")
 		
 		
 		public Person() {

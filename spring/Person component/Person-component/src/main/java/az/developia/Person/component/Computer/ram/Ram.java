@@ -2,9 +2,14 @@ package az.developia.Person.component.Computer.ram;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+@Component(value = "ComputerRam")
+
 public class Ram {
-	@Component(value = "ComputerRam")
-	public class Computer {
+	
+
 
 	private Integer id;
 	private String Brand;
@@ -12,7 +17,7 @@ public class Ram {
 	private Integer Price;
 
 
-	public Computer() {
+	public Ram() {
 	this.id=1;
 	this.Brand="DDR5";
 	this.RamAmount=16;
@@ -64,7 +69,15 @@ public class Ram {
 	public String toString() {
 		return "Computer [id=" + id + ", Brand=" + Brand + ", RamAmount=" + RamAmount + ", Price=" + Price + "]";
 	}
+	@PostConstruct
+	public void init() {
+		System.out.println("init method is working");
+	}
 	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("destroy method is working");
+	}
 	
 }
-	}
+	
