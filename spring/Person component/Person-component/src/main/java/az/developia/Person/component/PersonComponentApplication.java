@@ -4,8 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import az.developia.Person.component.Computer.Computer;
-import az.developia.Person.component.entity.Person;
+
 
 
 
@@ -23,9 +22,9 @@ public class PersonComponentApplication {
 	//	for (String names : beanDefinitionNames) {
 	//	System.out.println(names);
 		
-		Computer bean = r.getBean("myComp1",Computer.class);
+
 		
-		System.out.println(bean.getRam());
+		//System.out.println(bean.getRam());
 	}
 
 }
